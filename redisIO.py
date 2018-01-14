@@ -1,10 +1,11 @@
+import redis
+
 '''
 Fuctions:
 data_write write data into redis database
 data_read  read data from redis database
 
 '''
-import redis
 
 class Database:
         def __init__(self):
