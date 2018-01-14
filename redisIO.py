@@ -10,7 +10,7 @@ data_read  read data from redis database
 class Database:
         def __init__(self):
                 self.host = 'localhost'
-                self.port =6379
+                self.port = 6379
 
         def data_write(self, key, value):
                 r = redis.StrictRedis(host = self.host, port = self.port, decode_responses = True)
