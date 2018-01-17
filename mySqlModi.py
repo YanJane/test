@@ -23,7 +23,7 @@ for x in range(1,cursor.rowcount+1):
 
 	cursor.execute("SELECT * from bud_content where id=%s" %x)
 	temp = cursor.fetchone()[1].encode('utf-8')
-	if re.match(r'.*%s.*[^%s].*' % (special1,special2),temp):
+	if re.match(r'.*%s.*' % special1,temp) and not re.match(r'.*%s.*' % special2,temp):
 		temp=re.sub(r'%s' % special1,r'',temp)
 		cursor.execute('update bud_content set content= "%s" where id=%s' %(temp,x))
 		conn.commit()
