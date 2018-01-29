@@ -20,7 +20,7 @@ def code_add(code1, code2):
 def birth_to_life_code(birthday):
 	
 	#assert input birthday format is correct
-	assert birthday > 10**7 and birthday < 10**8 and birthday % 100 <= 31 and birthday > 0 and birthday // 100 % 100 <= 12 and birthday // 100 % 100 >0
+	assert birthday > 10**7 and birthday < 10**8 and birthday % 100 <= 31 and birthday % 100 > 0 and birthday // 100 % 100 <= 12 and birthday // 100 % 100 >0
 
 	#transfer birthday into 8 single num in list code
 	code = []
